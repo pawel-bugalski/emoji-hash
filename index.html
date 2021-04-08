@@ -13,7 +13,10 @@
 </label>
 <script>
     function showEmoji(){
-        const p = document.getElementById('emoji');const input = document.getElementById('text').value;p.innerHTML = emoji(hash(input))
+        const p = document.getElementById('emoji')
+        const input = document.getElementById('text').value;
+
+        p.innerHTML = emoji(hash(input));
     }
 </script>
 <button onclick=" showEmoji();">Emoji!</button>
