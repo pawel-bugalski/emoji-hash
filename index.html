@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Emoji hash</title>
+    <script src="emoji.js"></script>
+</head>
+<body>
+<div id="emoji" style="font-size: xxx-large"></div>
+<label>
+    String to hash:
+    <input id="text" type="text">
+</label>
+<script>
+    function showEmoji(){
+        const p = document.getElementById('emoji');const input = document.getElementById('text').value;p.innerHTML = emoji(hash(input))
+    }
+</script>
+<button onclick=" showEmoji();">Emoji!</button>
+</body>
+</html>
