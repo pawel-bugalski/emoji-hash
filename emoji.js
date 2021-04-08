@@ -13,7 +13,7 @@ const emoji = function () {
 		base += parseInt(range.to, 16) - parseInt(range.from, 16);
 	}
 	return function (id) {
-		let emoji = id % base;
+		let emoji = Math.abs(id % base);
 
 		for (let i = 0; i < emojiRange.length; i++) {
 			const range = emojiRange[i];
