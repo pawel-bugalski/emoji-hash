@@ -7,21 +7,23 @@
 </head>
 <body>
 <div id="emoji" style="font-size: xxx-large"></div>
-<label>
-    String to hash:
-    <input id="text" type="text">
-</label>
-<script>
-    function showEmoji(){
-        const p = document.getElementById('emoji')
-        const input = document.getElementById('text').value;
+<form onsubmit="showEmoji(); return false;">
+    <label>
+        String to hash:
+        <input id="text" type="text">
+    </label>
+    <script>
+        function showEmoji() {
+            const p = document.getElementById('emoji')
+            const input = document.getElementById('text').value;
 
-        p.innerHTML = emoji(hash(input));
-    }
-</script>
-<button onclick=" showEmoji();">Emoji!</button>
+            p.innerHTML = emoji(hash(input));
+        }
+    </script>
+    <button type="submit">Emoji!</button>
+</form>
 
-<p>Github: <a href="https://github.com/pawel-bugalski/emoji-hash">https://github.com/pawel-bugalski/emoji-hash</a> </p>
+<p>Github: <a href="https://github.com/pawel-bugalski/emoji-hash">https://github.com/pawel-bugalski/emoji-hash</a></p>
 
 </body>
 </html>
